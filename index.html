@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Seleção de Índice</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #resultado {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemplo de Seleção de Índice</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		#resultado {
+			margin-top: 20px;
+			font-weight: bold;
+		}
+	</style>
 </head>
 <body>
 
-    <h1>Selecione um Índice</h1>
-    <button id="botao">Mostrar Conteúdo</button>
-    <div id="resultado"></div>
+	<button id="botao">Mostrar Conteúdo</button>
+	<img id="resultado" src="" alt="">
 
-    <script>
-        const array = ["", "Segundo item", "Terceiro item", "Quarto item", "Quinto item"];
+	<script>
+		const agentes = [
+			"astra.webp",
+			"breach.webp",
+			"brimstone.webp",
+			"chamber.webp",
+			"clove.webp",
+			"cypher.webp",
+			"deadlock.webp",
+			"fade.webp",
+			"gekko.webp",
+			"harbor.webp",
+			"iso.webp",
+			"jett.webp",
+			"kayo.webp",
+			"killjoy.webp",
+			"neon.webp",
+			"omen.webp",
+			"phoenix.webp",
+			"raze.webp",
+			"reyna.webp",
+			"sage.webp",
+			"skye.webp",
+			"sova.webp",
+			"viper.webp",
+			"vyse.webp",
+			"yoru.webp"
+		];
 
-        document.getElementById('botao').addEventListener('click', function() {
-            // Seleciona um índice aleatório do array
-            const indiceAleatorio = Math.floor(Math.random() * array.length);
-            // Mostra o conteúdo na tela
-            document.getElementById('resultado').innerText = array[indiceAleatorio];
-        });
-    </script>
+		document.getElementById('botao').addEventListener('click', function() {
+			const indiceAleatorio = Math.floor(Math.random() * agentes.length);
+			document.getElementById("resultado").src = "agents/" + agentes[indiceAleatorio];
+		});
+	</script>
 
 </body>
 </html>
